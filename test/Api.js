@@ -191,8 +191,8 @@ describe("Api", () => {
 
         it ("Get market data", function() {
             return new Promise( function(resolve, reject) {
-                if (coreAsset !== "BTS") {
-                    reject(new Error("This test will only work when connected to a BTS api"));
+                if (coreAsset !== "LLC") {
+                    reject(new Error("This test will only work when connected to a LLC api"));
                 }
                 Apis.instance().history_api().exec("get_fill_order_history", ["1.3.121", "1.3.0", 10])
                 .then(function(history) {
