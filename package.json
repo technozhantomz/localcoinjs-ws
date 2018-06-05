@@ -13,7 +13,7 @@
     "test:manager": "cross-env BABEL_ENV=test mocha --compilers js:babel-core/register ./test/Manager --watch",
     "pretest:browser": "cross-env NODE_ENV=dev browserify test/*.js -o browser-test/browser-test.js -t [ babelify ]",
     "test:browser": "cross-env BABEL_ENV=test http-server ./browser-test",
-    "clean": "rm -rf ./cjs/* & rm -rf ./build/* & rm -rf ./es/*",
+    "clean": "rimraf ./cjs/* & rimraf ./build/* & rimraf ./es/*",
     "prebuild": "npm run clean",
     "build": "cross-env BABEL_ENV=cjs babel lib --out-dir cjs",
     "build-es": "cross-env BABEL_ENV=es babel ./lib -d es",
@@ -55,6 +55,7 @@
     "http-server": "^0.11.1",
     "mocha": "^2.3.4",
     "uglify-js": "^3.1.1",
-    "cross-env": "^5.0.1"
+    "cross-env": "^5.0.1",
+    "rimraf": "^2.6.2"
   }
 }
