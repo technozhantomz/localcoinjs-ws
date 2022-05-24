@@ -239,25 +239,25 @@ exports.__esModule = true;
 var _this = void 0;
 
 var ecc_config = {
-    address_prefix: process.env.npm_config__graphene_ecc_default_address_prefix || "LLC"
+    address_prefix: process.env.npm_config__graphene_ecc_default_address_prefix || "KES"
 };
 
 _this = {
     core_asset: "CORE",
-    address_prefix: "LLC",
+    address_prefix: "KES",
     expire_in_secs: 15,
     expire_in_secs_proposal: 24 * 60 * 60,
     review_in_secs_committee: 24 * 60 * 60,
     networks: {
         LocalCoin: {
-            core_asset: "LLC",
-            address_prefix: "LLC",
-            chain_id: "806101b8d87a91c433796f536708924409d4a2161ece2e555ceb2960de76a2cc"
+            core_asset: "KES",
+            address_prefix: "KES",
+            chain_id: "8d1be24270faee1bf531398c9b77c313956dbc9607f6b873e23ff62840786c07"
         },
         BitShares: {
-            core_asset: "BTS",
-            address_prefix: "BTS",
-            chain_id: "4018d7844c78f6a6c41c6a552b898022310fc5dec06da467ee7905a8dad512c8"
+            core_asset: "KES",
+            address_prefix: "KES",
+            chain_id: "8d1be24270faee1bf531398c9b77c313956dbc9607f6b873e23ff62840786c07"
         },
         Muse: {
             core_asset: "MUSE",
@@ -316,8 +316,8 @@ _this = {
 
     reset: function reset() {
         _this.core_asset = "CORE";
-        _this.address_prefix = "LLC";
-        ecc_config.address_prefix = "LLC";
+        _this.address_prefix = "KES";
+        ecc_config.address_prefix = "KES";
         _this.expire_in_secs = 15;
         _this.expire_in_secs_proposal = 24 * 60 * 60;
 
@@ -325,7 +325,7 @@ _this = {
     },
 
     setPrefix: function setPrefix() {
-        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "LLC";
+        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "KES";
 
         _this.address_prefix = prefix;
         ecc_config.address_prefix = prefix;

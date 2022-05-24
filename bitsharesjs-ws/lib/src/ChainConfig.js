@@ -5,21 +5,16 @@ let ecc_config = {
 };
 
 _this = {
-    core_asset: "KES",
+    core_asset: "CORE",
     address_prefix: "KES",
     expire_in_secs: 15,
     expire_in_secs_proposal: 24 * 60 * 60,
     review_in_secs_committee: 24 * 60 * 60,
     networks: {
-        LocalCoin: {
-            core_asset: "KES",
-            address_prefix: "KES",
-            chain_id: "8d1be24270faee1bf531398c9b77c313956dbc9607f6b873e23ff62840786c07"
-        },        
         BitShares: {
-            core_asset: "KES",
-            address_prefix: "KES",
-            chain_id: "8d1be24270faee1bf531398c9b77c313956dbc9607f6b873e23ff62840786c07"
+            core_asset: "BTS",
+            address_prefix: "BTS",
+            chain_id: "4018d7844c78f6a6c41c6a552b898022310fc5dec06da467ee7905a8dad512c8"
         },
         Muse: {
             core_asset: "MUSE",
