@@ -28,7 +28,7 @@ if (global) {
 };
 var autoReconnect = false; // by default don't use reconnecting-websocket
 /**
-    Configure: configure as follows `Apis.instance("ws://localhost:8090").init_promise`.  This returns a promise, once resolved the connection is ready.
+    Configure: configure as follows `Apis.instance("wss://node.commodity.llc/ws").init_promise`.  This returns a promise, once resolved the connection is ready.
 
     Import: import { Apis } from "@graphene/chain"
 
@@ -56,7 +56,7 @@ exports.default = {
         @return {Apis} singleton .. Check Apis.instance().init_promise to know when the connection is established
     */
     reset: function reset() {
-        var cs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "ws://localhost:8090";
+        var cs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "wss://node.commodity.llc/ws";
         var connect = arguments[1];
         var connectTimeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 4000;
 
@@ -77,7 +77,7 @@ exports.default = {
         });
     },
     instance: function instance() {
-        var cs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "ws://localhost:8090";
+        var cs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "wss://node.commodity.llc/ws";
         var connect = arguments[1];
         var connectTimeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 4000;
         var optionalApis = arguments[3];
